@@ -412,6 +412,12 @@
 }
 
 @media screen and (max-width: 720px) {
+  .categories, .made-with-love, .certificates, .for-soul, .subscribe, .philosophy{
+    .container{
+      margin-top: 80px;
+    }
+  }
+
   .certificates {
     .container {
       .certificates-title{
@@ -521,20 +527,37 @@
 }
 
 @media screen and (max-width: 477px){
-  .news {
-    .container {
-      .news-content {
-        .news-item {
-          width: 476px; // optional: original image width
-          height: 700px;
-        }
-      }
-    }
+  .made-with-love-header, .certificates-title {
+    margin: 0 20px 30px 20px !important;
   }
 }
 
 @media screen and (max-width: 430px){
   .your-email {
     width: 280px !important;
+  }
+
+  .news {
+    .container {
+      .news-title{
+        bottom: 700px !important;
+        @include block-header;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 370px){
+  .news {
+    .container {
+      .news-title{
+        bottom: 610px !important;
+        @include block-header;
+      }
+    }
+  }
+
+  .your-email {
+    width: 230px !important;
   }
 }

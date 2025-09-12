@@ -198,3 +198,15 @@
     }
   }
 }
+
+@media screen and (max-width: 370px){
+  .header-container {
+    .burger-menu {
+      margin-left: 10px;
+    }
+
+    .basket {
+      margin-right: 10px;
+    }
+  }
+}
