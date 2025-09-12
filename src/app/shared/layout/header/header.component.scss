@@ -1,0 +1,200 @@
+@import "../../../../assets/styles/_variables";
+
+.header-container {
+  position: relative;
+  padding: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  &.home {
+    background-color: transparent; // or whatever color for home
+  }
+
+  &.default {
+    background-color: rgba(228, 228, 228, 1); // header background when not home or menu closed
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  .burger-menu{
+    margin-left: 120px;
+    svg.home line {
+      stroke: #ffffff;
+    }
+    svg.default line {
+      stroke: #585450;
+    }
+  }
+
+  .logo {
+    svg.home path {
+      fill: #ffffff;
+    }
+    svg.default path {
+      fill: #585450;
+    }
+  }
+
+  .basket {
+    margin-right: 120px;
+    svg.home path {
+      stroke: #ffffff;
+    }
+    svg.default path {
+      stroke: #585450;
+    }
+  }
+
+
+}
+
+
+
+.menu-container {
+  width: 100vw;
+  z-index: 1000;
+  position: absolute;  // now positioned relative to header-container
+  top: 124px;           // directly below header
+  left: 0;
+  background: rgba(228, 228, 228, 1);
+  border: 1px solid rgba(191, 191, 191, 0.7);
+  box-sizing: border-box;
+
+  .menu {
+    z-index: 999;
+    padding: 80px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    .menu-actions{
+      display: flex;
+      .menu-categories {
+        margin-right: 105px;
+      }
+      .menu-block {
+        width: 314px;
+        .menu-head {
+          font-family: "PT Sans Narrow",sans-serif;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #262523;
+          margin-bottom: 50px;
+        }
+
+        .menu-items {
+          color: #585450;
+          font-family: "PT Sans Narrow",sans-serif;
+          font-size: 32px;
+          font-weight: 400;
+          text-transform: uppercase;
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+              border-bottom: 1px solid transparent;
+              margin-bottom: 30px;
+
+              a {
+                color: #585450;
+                cursor: pointer;
+                text-decoration: none;
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .menu-picture {
+      background-image: url("/assets/images/menu/menu-picture.png");
+      background-position: top;
+      width: 295px;
+      height: 410px;
+    }
+  }
+
+}
+@media screen and (max-width: 1140px) {
+  .menu-container {
+    .menu{
+      padding: 40px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .menu-container {
+    .menu {
+      .menu-picture{
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .menu-container {
+    .menu {
+      .menu-actions{
+        .menu-block{
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .menu-container {
+    .menu {
+      padding:10px 10px;
+      .menu-actions{
+        .menu-block{
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 598px){
+  .header-container {
+    .burger-menu{
+      margin-left: 40px;
+    }
+
+    .basket {
+      margin-right: 40px;
+    }
+  }
+
+  .menu-container {
+    .menu {
+      display: block;
+
+    }
+  }
+}
+@media screen and (max-width: 480px){
+  .menu-container {
+    .menu {
+      .menu-actions{
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

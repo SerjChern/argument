@@ -1,0 +1,187 @@
+<section class="main">
+  <div class="container">
+    <div class="hero-banner">&nbsp;</div>
+  </div>
+</section>
+
+<section class="categories">
+  <div class="container">
+    <div class="carousel-header">
+      <div class="carousel-title">категории</div>
+      <div class="carousel-arrows">
+        <a class="move-backward" (click)="owlCar.prev()">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7.29289 20.7071C6.90237 20.3166 6.90237 19.6834 7.29289 19.2929L13.6569 12.9289C14.0474 12.5384 14.6805 12.5384 15.0711 12.9289C15.4616 13.3195 15.4616 13.9526 15.0711 14.3431L9.41421 20L15.0711 25.6569C15.4616 26.0474 15.4616 26.6805 15.0711 27.0711C14.6805 27.4616 14.0474 27.4616 13.6569 27.0711L7.29289 20.7071ZM33 20V21H8V20V19H33V20Z"
+              fill="#585450"/>
+          </svg>
+        </a>
+        <a class="move-forward" (click)="owlCar.next()">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M33.7071 20.7071C34.0976 20.3166 34.0976 19.6834 33.7071 19.2929L27.3431 12.9289C26.9526 12.5384 26.3195 12.5384 25.9289 12.9289C25.5384 13.3195 25.5384 13.9526 25.9289 14.3431L31.5858 20L25.9289 25.6569C25.5384 26.0474 25.5384 26.6805 25.9289 27.0711C26.3195 27.4616 26.9526 27.4616 27.3431 27.0711L33.7071 20.7071ZM8 20V21H33V20V19H8V20Z"
+              fill="#585450"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="carousel-items">
+      <owl-carousel-o [options]="customOptions" #owlCar>
+        <ng-template carouselSlide *ngFor="let slide of slides">
+          <category-card [category]="slide"></category-card>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>
+
+<section class="made-with-love">
+  <div class="container">
+    <div class="made-with-love-header">сделано с любовью</div>
+    <div class="made-with-love-carousel">
+      <a class="move-backward" (click)="owlCar_love.prev()">
+        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.3019 8.78401C25.6973 8.39845 26.3304 8.40646 26.716 8.80189C27.1015 9.19732 27.0935 9.83044 26.6981 10.216L25.3019 8.78401ZM25.7413 29.784C26.1368 30.1696 26.1448 30.8027 25.7592 31.1981C25.3737 31.5935 24.7405 31.6015 24.3451 31.216L25.7413 29.784ZM26 9.5L26.6981 10.216L15.2453 21.3828L14.5472 20.6668L13.8491 19.9508L25.3019 8.78401L26 9.5ZM25.0432 30.5L24.3451 31.216L13.3019 20.4486L14 19.7326L14.6981 19.0166L25.7413 29.784L25.0432 30.5Z"
+            fill="#585450"/>
+        </svg>
+      </a>
+      <div class="carousel-items">
+        <owl-carousel-o [options]="customOptionsLove" #owlCar_love>
+          <ng-template carouselSlide *ngFor="let slide of slides_love">
+            <product-card [Product]="slide"></product-card>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+      <a class="move-forward" (click)="owlCar_love.next()">
+        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.6981 8.78401C14.3027 8.39845 13.6696 8.40646 13.284 8.80189C12.8985 9.19732 12.9065 9.83044 13.3019 10.216L14.6981 8.78401ZM14.2587 29.784C13.8632 30.1696 13.8552 30.8027 14.2408 31.1981C14.6263 31.5935 15.2595 31.6015 15.6549 31.216L14.2587 29.784ZM14 9.5L13.3019 10.216L24.7547 21.3828L25.4528 20.6668L26.1509 19.9508L14.6981 8.78401L14 9.5ZM14.9568 30.5L15.6549 31.216L26.6981 20.4486L26 19.7326L25.3019 19.0166L14.2587 29.784L14.9568 30.5Z"
+            fill="#585450"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="news">
+  <div class="container">
+    <div class="news-content">
+      <div class="news-item" style="background-image: url('/assets/images/news/new-1.png')">&nbsp;</div>
+      <div class="news-item" style="background-image: url('/assets/images/news/new-2.png')">&nbsp;</div>
+      <div class="news-item" style="background-image: url('/assets/images/news/new-3.png')">&nbsp;</div>
+    </div>
+    <div class="news-title">наши новинки</div>
+  </div>
+</section>
+
+<section class="certificates">
+  <div class="container">
+    <div class="certificates-title">подарочные сертификаты</div>
+    <div class="certificates-items">
+      <div class="certificate-item" *ngFor="let item of gift_certificates" [ngStyle]="{ 'background': item.gradient }">
+        <a href="{{ item.href }}">
+          <div class="certificate-item">
+            <div class="certificate-logo">
+              <img src="../../../assets/images/logo/certificate-logo.svg" alt="cert-logo">
+            </div>
+            <div class="certificate-price">
+              {{ item.price | currency:'RUB':' руб.':'1.0-2':'ru-RU' }}
+            </div>
+            <div class="certificate-name">
+              ПОДАРОЧНЫЙ СЕРТИФИКАТ
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="for-soul">
+  <div class="container">
+    <div class="for-soul-title">для души</div>
+    <div class="for-soul-carousel">
+      <a class="move-backward" (click)="owlCar_soul.prev()">
+        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.3019 8.78401C25.6973 8.39845 26.3304 8.40646 26.716 8.80189C27.1015 9.19732 27.0935 9.83044 26.6981 10.216L25.3019 8.78401ZM25.7413 29.784C26.1368 30.1696 26.1448 30.8027 25.7592 31.1981C25.3737 31.5935 24.7405 31.6015 24.3451 31.216L25.7413 29.784ZM26 9.5L26.6981 10.216L15.2453 21.3828L14.5472 20.6668L13.8491 19.9508L25.3019 8.78401L26 9.5ZM25.0432 30.5L24.3451 31.216L13.3019 20.4486L14 19.7326L14.6981 19.0166L25.7413 29.784L25.0432 30.5Z"
+            fill="#585450"/>
+        </svg>
+      </a>
+      <div class="carousel-items">
+        <owl-carousel-o [options]="customOptionsSoul" #owlCar_soul>
+          <ng-template carouselSlide *ngFor="let slide of slides_soul">
+            <product-card [Product]="slide"></product-card>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+      <a class="move-forward" (click)="owlCar_soul.next()">
+        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.6981 8.78401C14.3027 8.39845 13.6696 8.40646 13.284 8.80189C12.8985 9.19732 12.9065 9.83044 13.3019 10.216L14.6981 8.78401ZM14.2587 29.784C13.8632 30.1696 13.8552 30.8027 14.2408 31.1981C14.6263 31.5935 15.2595 31.6015 15.6549 31.216L14.2587 29.784ZM14 9.5L13.3019 10.216L24.7547 21.3828L25.4528 20.6668L26.1509 19.9508L14.6981 8.78401L14 9.5ZM14.9568 30.5L15.6549 31.216L26.6981 20.4486L26 19.7326L25.3019 19.0166L14.2587 29.784L14.9568 30.5Z"
+            fill="#585450"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe">
+  <div class="container">
+    <div class="subscribe-content">
+      <div class="subscribe-info">
+        <div class="envelope">
+          <svg xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50" fill="none">
+            <path opacity="0.9"
+                  d="M32.2959 24.2441L42.2659 34.2141L40.8509 35.6281L30.8809 25.6581L32.2959 24.2441ZM18.7779 24.2871L20.1919 25.7011L10.2919 35.6011L8.87793 34.1911L18.7779 24.2871Z"
+                  fill="white"/>
+            <path
+              d="M25.5 29.8998C24 29.8998 22.4 29.2998 21.3 28.0998L8.80005 15.6998L10.2 14.2998L22.7 26.7998C24.3 28.3998 26.8 28.3998 28.4 26.7998L40.9001 14.2998L42.3 15.6998L29.7001 28.1998C28.6 29.2998 27 29.8998 25.5 29.8998Z"
+              fill="white"/>
+            <path
+              d="M39.5 38H11.5C9.8 38 8.5 36.7 8.5 35V15C8.5 13.3 9.8 12 11.5 12H39.5C41.2 12 42.5 13.3 42.5 15V35C42.5 36.7 41.2 38 39.5 38ZM11.5 14C10.9 14 10.5 14.4 10.5 15V35C10.5 35.6 10.9 36 11.5 36H39.5C40.1 36 40.5 35.6 40.5 35V15C40.5 14.4 40.1 14 39.5 14H11.5Z"
+              fill="white"/>
+          </svg>
+        </div>
+        <div class="slogan">ПОДПИШИСЬ</div>
+        <div class="slogan-info">на наши новости и получи скидку 10% от первого заказа</div>
+      </div>
+      <div class="subscribe-actions">
+        <input type="email" placeholder="Ваш email" class="your-email">
+        <button class="subscribe-button">Подписаться</button>
+      </div>
+      <div class="oferta">Нажимая кнопку, Вы соглашаетесь с условиями оферты и
+        <a href="#">политикой конфиденциальности</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="container">
+    <div class="content">
+      <div class="philosophy-content">
+        <div class="philosophy-title">Наша философия</div>
+        <div class="philosophy-text">
+          Безусловно, сплочённость команды профессионалов не оставляет шанса для поставленных обществом задач. Являясь
+          всего
+          лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии, инициированные
+          исключительно синтетически, призваны к ответу. Каждый из нас понимает очевидную вещь: сложившаяся структура
+          организации требует анализа модели развития.
+        </div>
+      </div>
+      <div class="stay-in-contact">
+        <div class="stay-in-contact-info">
+          <div class="stay-in-contact-info-title">оставайтесь с нами на связи!</div>
+          <div class="stay-in-contact-info-text">
+            Подключайтесь к Telegram-каналу - вас ждут новости, актуальные подборки и много полезной информации.
+          </div>
+          <button class="contact-button">Подписаться</button>
+        </div>
+        <div class="credentials">
+          <img src="assets/images/logo/qr.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

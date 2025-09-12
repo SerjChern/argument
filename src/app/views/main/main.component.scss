@@ -1,0 +1,540 @@
+@import "../../../assets/styles/_mixins";
+.main {
+  .container {
+    .hero-banner {
+      background-image: url('../../../assets/images/hero-banner.png');
+      background-size: cover;
+      background-position: center;
+      height: 931px;
+      margin-top: -152px;
+
+    }
+  }
+}
+
+.categories{
+  .container{
+    margin-top: 180px;
+    .carousel-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 100px 30px 100px;
+      .carousel-title{
+        @include block-header;
+      }
+      .carousel-arrows{
+        .move-backward{
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+.made-with-love{
+  .container{
+    margin-top: 180px;
+    .made-with-love-header{
+      @include block-header;
+      margin: 0 100px 30px 100px;
+    }
+    .made-with-love-carousel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .carousel-items{
+        flex: 1 1 auto; // take all available width
+        min-width: 0;   // VERY important for flexbox + carousel
+        owl-carousel-o {
+          width: 100%; // ensures carousel fills container
+        }
+      }
+    }
+  }
+}
+
+.news{
+  .container{
+    margin-top: 180px;
+    .news-content{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3px;
+      .news-item{
+        width: 100%;                          // scales with parent container
+        max-width: 476px;                     // optional: original image width
+        aspect-ratio: 476 / 700;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    .news-title{
+      text-align: center;
+      color: white;
+      font-family: "PT Sans Narrow", sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+      bottom: 65px;
+    }
+  }
+}
+
+.certificates{
+  .container{
+    margin-top: 180px;
+    .certificates-title{
+      @include block-header;
+      margin: 0 100px 30px 100px;
+    }
+    .certificates-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-left: 100px;
+      margin-right: 205px;
+
+      .certificate-item {
+        max-width: 293px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+      }
+
+
+      .certificate-logo{
+        padding-top: 28px;
+        padding-bottom: 17px;
+      }
+
+      .certificate-price{
+        padding-bottom: 17px;
+        color: #FFF;
+        font-family: "PT Sans Narrow", sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%; /* 39.2px */
+      }
+
+      .certificate-name {
+        padding-bottom: 28px;
+        margin-right: 42px;
+        margin-left: 44px;
+        color: #FFF;
+        font-family: "PT Sans Narrow", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 28px */
+      }
+    }
+  }
+}
+
+.for-soul{
+  .container{
+    margin-top: 180px;
+    .for-soul-title{
+      @include block-header;
+      margin: 0 100px 30px 100px;
+    }
+    .for-soul-carousel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .carousel-items{
+        flex: 1 1 auto; // take all available width
+        min-width: 0;   // VERY important for flexbox + carousel
+        owl-carousel-o {
+          width: 100%; // ensures carousel fills container
+        }
+      }
+    }
+  }
+}
+
+.subscribe{
+  .container{
+    margin-top: 180px;
+    background-image: url("../../../assets/images/subscribe.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 924px;
+    .subscribe-content{
+      position: relative;
+      top: 615px;
+      .envelope {
+        text-align: center;
+      }
+      .slogan {
+        color: white;
+        text-align: center;
+        font-family: "Bodoni MT", sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-bottom: 10px;
+      }
+      .slogan-info {
+        color: white;
+        text-align: center;
+        /* P1.1 - 20 bold */
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 24px */
+        letter-spacing: 0.2px;
+        margin-bottom: 20px;
+      }
+      .subscribe-actions {
+        text-align: center;
+        margin-bottom: 30px;
+        .your-email {
+          padding: 20px 30px 20px 20px;
+          width: 338px;
+          border: none;
+          margin-right: 20px;
+
+          color: #A69F9F;
+          font-family: Arial, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+        }
+
+        .subscribe-button {
+          padding: 20px 40px;
+          border: 2px solid white;
+          background: transparent;
+          color: white;
+          /* P1.1 - 20 bold */
+          font-family: Arial, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          letter-spacing: 0.2px;
+        }
+      }
+      .oferta {
+        text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: 1.04px;
+
+        a {
+          color: white;
+          font-family: Arial, sans-serif;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%;
+          letter-spacing: 1.04px;
+          text-decoration-line: underline;
+          text-decoration-style: solid;
+          text-decoration-skip-ink: auto;
+          text-decoration-thickness: 7.5%;
+          text-underline-offset: 13.5%;
+          text-underline-position: from-font;
+        }
+      }
+    }
+  }
+}
+
+.philosophy {
+  .container{
+    margin-top: 180px;
+
+    .content{
+      margin-left: 100px;
+      max-width: 1028px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .philosophy-content{
+        .philosophy-title{
+          @include block-header;
+          margin-bottom: 20px;
+        }
+        .philosophy-text {
+
+          color: $main-text-color;
+          /* P1 - 20 */
+          font-family: Arial, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 28px */;
+        }
+      }
+      .stay-in-contact{
+        margin-top: 180px;
+        margin-bottom: 180px;
+        width: 817px;
+        display: flex;
+        justify-content: space-between;
+        .stay-in-contact-info{
+          max-width: 505px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .stay-in-contact-info-title{
+            @include block-header;
+            text-align: center;
+          }
+          .stay-in-contact-info-text{
+            color: $main-text-color;
+            /* P1 - 20 */
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 28px */
+          }
+          .contact-button{
+            padding: 20px 10px;
+            border:1px solid #262523;
+            box-sizing: border-box;
+            background: none;
+            width: 100%;
+
+            color: #262523;
+            text-align: center;
+            /* P2.2 - 16 ar */
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 120%; /* 19.2px */
+            letter-spacing: 0.32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ng-star-inserted {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1145px) {
+  .philosophy {
+    .container {
+      .content {
+        margin: 0 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1045px) {
+  .news {
+    .container {
+      .news-content {
+        .news-item:last-child {
+          display: none;
+        }
+      }
+      .news-title{
+        bottom: 765px;
+        @include block-header;
+      }
+    }
+  }
+}
+@media screen and (max-width: 933px){
+  .philosophy {
+    .container {
+      .content {
+        .stay-in-contact {
+          width: 100%;
+          .stay-in-contact-info{
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .news {
+    .container {
+      .news-title{
+        bottom: 725px !important;
+        @include block-header;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .news {
+    .container {
+      .news-title{
+        bottom: 670px !important;
+        @include block-header;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .news {
+    .container {
+      .news-content {
+        .news-item:last-child {
+          display: none;
+        }
+      }
+      .news-title{
+        bottom: 630px !important;
+        @include block-header;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .certificates {
+    .container {
+      .certificates-title{
+        text-align: center;
+      }
+      .certificates-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .news {
+    .container {
+      .news-title{
+        bottom: 580px !important;
+        @include block-header;
+      }
+    }
+  }
+
+  .move-backward {
+    display: none;
+  }
+
+  .move-forward {
+    display: none;
+  }
+  .carousel-header{
+    display: block !important;
+  }
+
+  .carousel-title {
+    text-align: center;
+  }
+  .made-with-love-header{
+    text-align: center;
+  }
+  .for-soul-title{
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 659px){
+
+  .subscribe{
+    .container {
+      .subscribe-content {
+        top: 545px;
+
+        .subscribe-actions {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .subscribe-button {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .stay-in-contact-info{
+   gap:30px;
+    text-align: center;
+  }
+  .credentials{
+    display: none;
+  }
+
+
+}
+
+@media screen and (max-width: 620px){
+  .news {
+    .container {
+      .news-title{
+        bottom: 765px !important;
+        @include block-header;
+      }
+    }
+  }
+  .news-content {
+    justify-content: center !important;
+    .news-item {
+      &:nth-child(n+2) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 522px){
+  .subscribe {
+    .container {
+      .subscribe-content {
+        top: 500px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 477px){
+  .news {
+    .container {
+      .news-content {
+        .news-item {
+          width: 476px; // optional: original image width
+          height: 700px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px){
+  .your-email {
+    width: 280px !important;
+  }
+}

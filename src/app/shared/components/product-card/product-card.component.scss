@@ -1,0 +1,35 @@
+@import "../../../../assets/styles/variables";
+.product-card {
+  width: 295px;
+  height: 497px;
+  box-sizing: border-box;
+
+  .product-card-image {
+    width: 295px;
+    height: 410px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .product-card-name {
+    color: $main-text-color;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  .product-card-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .product-card-prise {
+      color: $main-text-color;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}

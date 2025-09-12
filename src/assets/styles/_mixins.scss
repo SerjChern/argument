@@ -1,0 +1,8 @@
+@import "variables";
+@mixin block-header {
+  color: $main-text-color;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+}

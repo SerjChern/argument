@@ -1,0 +1,23 @@
+.category-card {
+  width: 268px !important;
+  height: 374px !important;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    scale: 1.1;
+    cursor: pointer;
+  }
+
+
+  .category-card-name {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 334px;
+    z-index: 10;
+  }
+}
