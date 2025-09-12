@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "category": "1",
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/with-love/love-1.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+  },
+  {
+    "id": "2",
+    "category": "1",
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/with-love/love-2.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+  },
+  {
+    "id": "3",
+    "category": "1",
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/with-love/love-3.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+  },
+  {
+    "id": "4",
+    "category": "1",
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/with-love/love-4.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+  }
+]
