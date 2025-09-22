@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "categoryType": "Одежда",
+    "subCategories":[
+      {
+        "name": "Свитеры",
+        "idSubCat": 1
+      },
+      {
+        "name": "Кофты",
+        "idSubCat": 2
+      },
+      {
+        "name": "Варежки",
+        "idSubCat": 3
+      },
+      {
+        "name": "Носки",
+        "idSubCat": 4
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "categoryType": "Аксессуары",
+    "subCategories":[
+      {
+        "name": "Шарфы",
+        "idSubCat": 1
+      },
+      {
+        "name": "Подвески",
+        "idSubCat": 2
+      }
+    ]
+  }
+]
