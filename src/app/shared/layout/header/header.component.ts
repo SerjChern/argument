@@ -44,13 +44,13 @@ export class HeaderComponent implements OnInit {
   protected isHome = false;
 
   protected menuItems = [
-    { label: 'все товары', link: '/products' },
-    { label: 'свитеры', link: '/products/sweaters' },
-    { label: 'шарфы', link: '/products/scarfs' },
-    { label: 'шапки', link: '/products/hats' },
-    { label: 'балаклавы', link: '/products/balaklavas' },
-    { label: 'подвески', link: '/products/charms' },
-    { label: 'носки', link: '/products/socks' }
+    { label: 'все товары', link: '/catalog' },
+    { label: 'свитеры', link: '/catalog/sweaters' },
+    { label: 'шарфы', link: '/catalog/scarfs' },
+    { label: 'шапки', link: '/catalog/hats' },
+    { label: 'балаклавы', link: '/catalog/balaklavas' },
+    { label: 'подвески', link: '/catalog/charms' },
+    { label: 'носки', link: '/catalog/socks' }
   ];
 
   protected forCustomersItems = [
@@ -75,6 +75,7 @@ export class HeaderComponent implements OnInit {
       .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
       .subscribe(event => {
         this.isHome = event.urlAfterRedirects === '/';
+        this.menu = false; // 👈 automatically close menu
         console.log('NavigationEnd:', event.urlAfterRedirects, 'isHome=', this.isHome);
       });
   }

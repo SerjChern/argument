@@ -1,0 +1,15 @@
+<div class="catalog-filter" [class.open]="open" >
+  <div class="catalog-filter-head" (click)="toggle()">
+    <span>{{category?.categoryType}}</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <path d="M19.2929 15.2929C19.6834 14.9024 20.3166 14.9024 20.7071 15.2929L27.0711 21.6569C27.4616 22.0474 27.4616 22.6805 27.0711 23.0711C26.6805 23.4616 26.0474 23.4616 25.6569 23.0711L20 17.4142L14.3431 23.0711C13.9526 23.4616 13.3195 23.4616 12.9289 23.0711C12.5384 22.6805 12.5384 22.0474 12.9289 21.6569L19.2929 15.2929ZM20 17H19V16H20H21V17H20Z" fill="#262523"/>
+    </svg>
+  </div>
+  <div class="catalog-filter-body">
+    <label class="catalog-filter-checkbox" *ngFor="let subCategory of category?.subCategories">
+      <span>{{subCategory?.name}}</span>
+      <input type="checkbox">
+    </label>
+  </div>
+</div>
+

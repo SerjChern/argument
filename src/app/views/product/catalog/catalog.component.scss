@@ -1,0 +1,96 @@
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/variables";
+
+.catalog{
+  padding: 35px 100px 100px 100px;
+  .container{
+    .nav-back{
+      display: flex;
+      align-items: center;
+      color: $main-text-color;
+      font-family: "PT Sans Narrow", sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      cursor: pointer;
+      svg{
+        path{
+          fill: $main-text-color;
+        }
+      }
+      span{
+        margin-left: 5px;
+      }
+    }
+
+    .catalog-title {
+      @include block-header();
+      text-align: center;
+    }
+
+    .catalog-head{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-left: 317px;
+
+      .catalog-applied-filters{
+        display: flex;
+        flex-wrap: wrap;
+
+        .catalog-applied-filter{
+          border: 1px solid $main-text-color;
+          color: $main-text-color;
+          font-family: Arial, sans-serif;
+          background: white;
+          border-radius: 50px;
+          font-size: 16px;
+          padding:8px 14px;
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+          margin-bottom: 20px;
+
+          a{
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+            margin-left: 8px;
+            svg{
+              margin-top: 1px;
+              line{
+                stroke: $main-text-color;
+              }
+            }
+          }
+        }
+      }
+      .catalog-sorting{
+        display: flex;
+        align-items: center;
+        span {
+          margin-right: 8px;
+          color: $main-text-color;
+          font-family: Arial, sans-serif;
+        }
+      }
+    }
+
+    .catalog-layout{
+      margin-top: 10px;
+      display: flex;
+
+      .catalog-filters{
+        width: 210px;
+        min-width: 210px;
+        margin-right: 105px;
+
+
+      }
+      .catalog-products{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px 30px;
+      }
+    }
+  }
+}

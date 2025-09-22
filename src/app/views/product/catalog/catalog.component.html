@@ -1,0 +1,40 @@
+<div class="catalog">
+  <div class="container">
+    <div class="nav-back" routerLink="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <path d="M5.47588 14.5699C5.18971 14.859 5.19247 15.3257 5.48204 15.6123L10.2009 20.2826C10.4904 20.5691 10.9572 20.5671 11.2433 20.2779C11.5295 19.9888 11.5267 19.5221 11.2372 19.2355L7.04266 15.0842L11.1879 10.8958C11.474 10.6067 11.4713 10.1399 11.1817 9.85335C10.8922 9.56677 10.4254 9.56884 10.1393 9.85798L5.47588 14.5699ZM26 15L25.9956 14.2629L5.99584 14.3517L6.0002 15.0888L6.00455 15.8259L26.0044 15.7371L26 15Z" fill="#A69F9F"/>
+      </svg>
+      <span>На главную</span>
+    </div>
+    <div class="catalog-title">Каталог</div>
+    <div class="catalog-head">
+      <div class="catalog-applied-filters">
+        <div class="catalog-applied-filter">
+          <span>Свитеры</span>
+          <a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+              <line x1="0.935622" y1="1.1499" x2="12.9564" y2="13.1707" stroke="#A8ABA7" stroke-linecap="round"/>
+              <line x1="12.9238" y1="1.12996" x2="0.903013" y2="13.1508" stroke="#A8ABA7" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="catalog-sorting">
+        <span>Сортировать</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="8" viewBox="0 0 16 8" fill="none">
+          <path d="M8.00026 7.50003C7.41693 7.50003 6.83359 7.27503 6.39193 6.83337L0.958594 1.40003C0.716927 1.15837 0.716927 0.758366 0.958594 0.516699C1.20026 0.275033 1.60026 0.275033 1.84193 0.516699L7.27526 5.95003C7.67526 6.35003 8.32526 6.35003 8.72526 5.95003L14.1586 0.516699C14.4003 0.275033 14.8003 0.275033 15.0419 0.516699C15.2836 0.758366 15.2836 1.15837 15.0419 1.40003L9.60859 6.83337C9.16693 7.27503 8.58359 7.50003 8.00026 7.50003Z" fill="#2C2C2C"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="catalog-layout">
+      <div class="catalog-filters">
+        <category-filter [category]="category" *ngFor="let category of categories"></category-filter>
+      </div>
+      <div class="catalog-products">
+        <product-card *ngFor="let product of products" [Product]="product"></product-card>
+      </div>
+    </div>
+  </div>
+</div>
+
