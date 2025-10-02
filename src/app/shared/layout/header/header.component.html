@@ -33,7 +33,7 @@
             <nav class="menu-items">
               <ul>
                 <li *ngFor="let item of menuItems">
-                  <a [routerLink]="item.link">{{ item.label }}</a>
+                  <a [routerLink]="'/catalog'" [queryParams]="{ categoryId: item.categoryId, sub: item.sub }">{{ item.label }}</a>
                 </li>
               </ul>
             </nav>

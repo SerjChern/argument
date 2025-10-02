@@ -7,4 +7,5 @@ export type ProductType = {
   "size": string,
   "color": string,
   "description": string,
+  "sort"?: string,
 }
