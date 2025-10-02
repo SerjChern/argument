@@ -44,13 +44,13 @@ export class HeaderComponent implements OnInit {
   protected isHome = false;
 
   protected menuItems = [
-    { label: 'все товары', link: '/catalog' },
-    { label: 'свитеры', link: '/catalog/sweaters' },
-    { label: 'шарфы', link: '/catalog/scarfs' },
-    { label: 'шапки', link: '/catalog/hats' },
-    { label: 'балаклавы', link: '/catalog/balaklavas' },
-    { label: 'подвески', link: '/catalog/charms' },
-    { label: 'носки', link: '/catalog/socks' }
+    { label: 'все товары', categoryId: '', sub: '' },
+    { label: 'свитеры', categoryId: '1', sub: 'Свитеры' },
+    { label: 'шарфы', categoryId: '2', sub: 'Шарфы' },
+    { label: 'шапки', categoryId: '1', sub: 'Шапки' },
+    { label: 'балаклавы', categoryId: '1', sub: 'Балаклавы' },
+    { label: 'подвески', categoryId: '2', sub: 'Подвески' },
+    { label: 'носки', categoryId: '1', sub: 'Носки' }
   ];
 
   protected forCustomersItems = [

@@ -8,7 +8,9 @@
   <div class="catalog-filter-body">
     <label class="catalog-filter-checkbox" *ngFor="let subCategory of category?.subCategories">
       <span>{{subCategory?.name}}</span>
-      <input type="checkbox">
+      <input type="checkbox"
+             [checked]="selectedSubs.includes(subCategory.name)"
+             (change)="onCheckboxChange(subCategory.name, $event)">
     </label>
   </div>
 </div>
