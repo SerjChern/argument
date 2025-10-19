@@ -1,3 +1,5 @@
+@import "mixins";
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,4 +9,50 @@ html, body {
 .container {
   max-width: $container-width;
   margin: 0 auto;
+}
+
+.for-soul{
+  .container{
+    margin-top: 180px;
+    .for-soul-title{
+      @include block-header;
+      margin: 0 100px 30px 100px;
+    }
+    .for-soul-carousel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .move-backward, .move-forward {
+        cursor: pointer;
+      }
+      .carousel-items{
+        flex: 1 1 auto; // take all available width
+        min-width: 0;   // VERY important for flexbox + carousel
+        owl-carousel-o {
+          width: 100%; // ensures carousel fills container
+        }
+      }
+    }
+  }
+}
+
+.nav-back {
+  display: flex;
+  align-items: center;
+  color: $main-text-color;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-bottom: 24px;
+
+  svg {
+    path {
+      fill: $main-text-color;
+    }
+  }
+
+  span {
+    margin-left: 5px;
+  }
 }

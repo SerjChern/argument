@@ -1,42 +1,46 @@
 [
   {
     "id": "1",
-    "category": "1",
+    "category": "Шапки",
     "title": "шапка из 100% мериноса",
     "price": 5000,
     "image" : "assets/images/with-love/love-1.png",
     "size": "M",
     "color" : "white",
-    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url": "hat_1"
   },
   {
     "id": "2",
-    "category": "1",
+    "category": "Шарфы",
     "title": "шапка из 100% мериноса",
     "price": 5000,
     "image" : "assets/images/with-love/love-2.png",
     "size": "M",
     "color" : "white",
-    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "scarf_2"
   },
   {
-    "id": "3",
-    "category": "1",
+    "id": "2",
+    "category": "Шарфы",
     "title": "шапка из 100% мериноса",
     "price": 5000,
     "image" : "assets/images/with-love/love-3.png",
     "size": "M",
     "color" : "white",
-    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "scarf_3"
   },
   {
-    "id": "4",
-    "category": "1",
+    "id": "1",
+    "category": "Свитеры",
     "title": "шапка из 100% мериноса",
     "price": 5000,
     "image" : "assets/images/with-love/love-4.png",
     "size": "M",
     "color" : "white",
-    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+    "description" : "Свитер из 100% мериноса описание шапки самой лучшей",
+    "url" : "sweater_3"
   }
 ]
