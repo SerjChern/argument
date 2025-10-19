@@ -1,0 +1,127 @@
+<div class="order">
+  <div class="container">
+    <div class="nav-back" routerLink="/cart">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <path d="M5.47588 14.5699C5.18971 14.859 5.19247 15.3257 5.48204 15.6123L10.2009 20.2826C10.4904 20.5691 10.9572 20.5671 11.2433 20.2779C11.5295 19.9888 11.5267 19.5221 11.2372 19.2355L7.04266 15.0842L11.1879 10.8958C11.474 10.6067 11.4713 10.1399 11.1817 9.85335C10.8922 9.56677 10.4254 9.56884 10.1393 9.85798L5.47588 14.5699ZM26 15L25.9956 14.2629L5.99584 14.3517L6.0002 15.0888L6.00455 15.8259L26.0044 15.7371L26 15Z" fill="#A69F9F"/>
+      </svg>
+      <span>В корзину</span>
+    </div>
+    <div class="order-title">оформление заказа</div>
+    <div class="order-overview">
+      <div class="order-info">
+        <div class="order-contacts">
+          <div class="title">как с вами связаться</div>
+          <div class="order-input">
+            <input type="text" class="input" placeholder="Имя">
+          </div>
+          <div class="order-input">
+            <input type="text" class="input" placeholder="Номер телефона">
+          </div>
+          <div class="order-input">
+            <input type="text" class="input" placeholder="Имейл">
+          </div>
+        </div>
+        <div class="order-address">
+          <div class="title">укажите адрес для доставки</div>
+          <div class="order-input">
+            <input type="text" class="input" placeholder="Город">
+          </div>
+          <div class="order-input">
+            <input type="text" class="input" placeholder="Улица">
+          </div>
+          <div class="order-input">
+            <input type="text" class="input" placeholder="Дом">
+          </div>
+          <div class="order-input">
+            <input type="text" class="input" placeholder="Подъезд">
+          </div>
+          <div class="order-input">
+            <input type="text" class="input" placeholder="Квартира">
+          </div>
+        </div>
+        <div class="payment-method">
+          <div class="title">форма оплаты</div>
+          <div class="option" *ngFor="let option of paymentOptions">
+            <label class="label">
+              <input
+                type="checkbox"
+                name="choice"
+                class="checkbox"
+                [checked]="selectedPaymentOption === option"
+                (change)="selectPaymentOption(option, $event)"
+              />
+              {{ option }}
+            </label>
+          </div>
+        </div>
+        <div class="delivery-method">
+          <div class="title">доставка</div>
+          <div class="option" *ngFor="let option of paymentDeliveryOptions">
+            <label class="label">
+              <input
+                type="checkbox"
+                name="choice"
+                class="checkbox"
+                [checked]="selectedDeliveryOption === option"
+                (change)="selectDeliveryOption(option, $event)"
+              />
+              {{ option }}
+            </label>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="order-products">
+        <div class="title">ваш заказ</div>
+        <div class="order-product-list">
+        <div class="order-product" *ngFor="let item of cartItems; let i = index">
+          <div class="order-product-image" style="background-image: url({{item.image}})"></div>
+          <div class="order-product-info">
+            <div class="order-product-info-name">{{item.name}}</div>
+            <div class="order-product-info-extra">
+              <div class="order-product-info-extra-size" *ngIf="item.size">
+                <span>Размер:</span>
+                <div class="order-product-info-extra-size-size">{{item.size}}</div>
+              </div>
+              <div class="order-product-info-extra-color" *ngIf="item.color">
+                <span>Цвет:</span>
+                <div class="order-product-info-extra-color-color">{{item.color}}</div>
+              </div>
+              <div class="order-product-info-extra-amount" *ngIf="item.color">
+                <span>Количество:</span>
+                <div class="order-product-info-extra-amount-amount">{{item.quantity}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="order-product-price">{{ item.price * item.quantity }} руб</div>
+        </div>
+        </div>
+        <div class="order-actions">
+          <div class="summary">
+            <span>Стоимость товаров:</span>
+            <div class="total-price">
+              {{price}} руб
+            </div>
+          </div>
+          <div class="summary" *ngIf="selectedDeliveryOption === 'Доставка курьером'">
+            <span>Доставка:</span>
+            <div class="total-price">
+              {{deliveryPrice}} руб
+            </div>
+          </div>
+          <div class="summary">
+            <span>Итого:</span>
+            <div class="total-price">
+              {{totalPrice}} руб
+            </div>
+          </div>
+          <div class="order-action">
+            <button class="order-button">Оплатить заказ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

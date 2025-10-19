@@ -5,6 +5,8 @@ import {ProductCardComponent} from "./components/product-card/product-card.compo
 import {GetSlidesService} from "./services/get-slides.service";
 import { CategoryCardComponent } from './components/category-card/category-card.component';
 import { CategoryFilterComponent } from './components/category-filter/category-filter.component';
+import { CountSelectorComponent } from './components/count-selector/count-selector.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -12,16 +14,19 @@ import { CategoryFilterComponent } from './components/category-filter/category-f
   declarations: [
     ProductCardComponent,
     CategoryCardComponent,
-    CategoryFilterComponent
+    CategoryFilterComponent,
+    CountSelectorComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule
   ],
   exports: [
     ProductCardComponent,
     CategoryCardComponent,
-    CategoryFilterComponent
+    CategoryFilterComponent,
+    CountSelectorComponent
   ]
 })
 export class SharedModule { }

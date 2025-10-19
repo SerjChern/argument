@@ -5,6 +5,8 @@ import { ProductRoutingModule } from './product-routing.module';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DetailComponent } from './detail/detail.component';
 import {SharedModule} from "../../shared/shared.module";
+import {CarouselModule} from "ngx-owl-carousel-o";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 @NgModule({
@@ -12,10 +14,12 @@ import {SharedModule} from "../../shared/shared.module";
     CatalogComponent,
     DetailComponent
   ],
-  imports: [
-    CommonModule,
-    ProductRoutingModule,
-    SharedModule
-  ]
+    imports: [
+        CommonModule,
+        ProductRoutingModule,
+        SharedModule,
+        CarouselModule,
+        MatSnackBarModule,
+    ]
 })
 export class ProductModule { }

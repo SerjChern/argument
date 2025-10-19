@@ -1,0 +1,212 @@
+@import "../../../../assets/styles/_mixins";
+
+.title{
+  color: rgba(88, 84, 80, 1);
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.input{
+  padding: 20px 0 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid rgba(88, 84, 80, 1);
+  color: rgba(120, 116, 112, 1);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  background: transparent;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.option{
+  margin-bottom: 10px;
+
+}
+
+.label{
+  color: rgba(88, 84, 80, 1);
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 3px solid rgba(88, 84, 80, 1);
+  margin-right: 10px;
+}
+
+.order{
+  padding-top: 80px;
+  padding-bottom: 100px;
+  .container{
+    padding-left: 100px;
+    padding-right: 100px;
+    .order-title{
+      @include block-header;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    .order-overview{
+      display: flex;
+      justify-content: space-between;
+      .order-info{
+        .order-contacts{
+          margin-bottom: 20px;
+        }
+        .order-address{
+          margin-bottom: 40px;
+        }
+        .payment-method{
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .order-products{
+      .order-product{
+        padding: 30px 0;
+        border-bottom: 1px solid #2F1509;
+        border-top: 1px solid #2F1509;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:not(:first-child) {
+          border-top: none;
+        }
+
+        .order-product-image{
+          width: 187px;
+          height: 155px;
+          background-size: cover;       /* or "contain" depending on your goal */
+          background-position: center;  /* centers the image */
+          background-repeat: no-repeat; /* avoids tiling */
+          margin-right: 20px;
+        }
+        .order-product-info{
+          display: flex;
+          flex-direction: column;
+          .order-product-info-name{
+            @include block-header;
+            margin-bottom: 10px;
+          }
+
+          .order-product-info-extra{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .order-product-info-extra-size, .order-product-info-extra-color, .order-product-info-extra-amount{
+              display: flex;
+              align-items: center;
+              margin-right: 20px;
+              span{
+                color: #262523;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                margin-right: 10px;
+              }
+              .order-product-info-extra-size-size{
+                display: flex;
+                width: 30px;
+                height: 30px;
+                padding: 1px 1px 1px 2px;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #A69F9F;
+                box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.18);
+
+                color: #585450;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+              }
+            }
+            .order-product-info-extra-color{
+              .order-product-info-extra-color-color{
+                color: #585450;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+              }
+            }
+            .order-product-info-extra-amount{
+              .order-product-info-extra-amount-amount{
+                color: #585450;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        .order-product-price{
+          color: #262523;
+          font-family: "PT Sans Narrow", sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+
+    .order-actions{
+      margin-top: 50px;
+
+      .summary{
+        display: flex;
+        justify-content: space-between;
+        color: #262523;
+        font-family: "PT Sans Narrow", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 15px;
+      }
+      .order-action{
+        padding-top: 35px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .order-button{
+          cursor: pointer;
+          padding: 20px 136px;
+          border: 1px solid rgba(88, 84, 80, 1);
+          background: transparent;
+          color: rgba(88, 84, 80, 1);
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+
+    }
+
+  }
+}

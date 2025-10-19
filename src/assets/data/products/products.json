@@ -1,13 +1,43 @@
 [
   {
     "id": "1",
+    "category": "Шапки",
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/with-love/love-1.png",
+    "otherSizes": ["s", "m", "l", "xl"],
+    "color": "бежевый",
+    "otherColors" : [
+      {
+        "color": "белый",
+        "icon": "assets/images/soul/soul-1.png"
+      },
+      {
+        "color": "синий",
+        "icon": "assets/images/soul/soul-2.png"
+      },
+      {
+        "color": "красный",
+        "icon": "assets/images/soul/soul-3.png"
+      },
+      {
+        "color": "бежевый",
+        "icon": "assets/images/with-love/love-1.png"
+      }
+    ],
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url": "hat_1"
+  },
+  {
+    "id": "1",
     "category": "Свитеры",
     "title": "Шапка из 100% Мериноса Свитеры",
     "price": 1000,
     "image": "assets/images/categories/hats.png",
     "size": "m",
     "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "description": "the best hat from merinos, you will not find better",
+    "url" : "sweater_1"
   },
   {
     "id": "1",
@@ -17,86 +47,156 @@
     "image": "assets/images/categories/hats.png",
     "size": "m",
     "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "description": "the best hat from merinos, you will not find better",
+    "url" : "sweater_2"
+  },
+  {
+    "id": "1",
+    "category": "Свитеры",
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/with-love/love-4.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "Свитер из 100% мериноса описание шапки самой лучшей",
+    "url" : "sweater_3"
   },
   {
     "id": "1",
     "category": "Кофты",
-    "title": "Шапка из 100% Мериноса Кофты",
+    "title": "Кофта из 100% Мериноса Кофты",
     "price": 3000,
     "image": "assets/images/categories/hats.png",
     "size": "m",
     "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "description": "the best hat from merinos, you will not find better",
+    "url" : "kofta_1"
   },
   {
     "id": "1",
     "category": "Носки",
-    "title": "Шапка из 100% Мериноса Носки",
+    "title": "Носки из 100% Мериноса Носки",
     "price": 4000,
     "image": "assets/images/categories/hats.png",
     "size": "m",
     "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "description": "the best hat from merinos, you will not find better",
+    "url" : "noski_1"
   },
+
   {
     "id": "2",
     "category": "Шарфы",
-    "title": "Шапка из 100% Мериноса Шарфы",
+    "title": "Шарф из 100% Мериноса Шарфы",
     "price": 5000,
     "image": "assets/images/categories/hats.png",
     "size": "m",
     "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "description": "the best hat from merinos, you will not find better",
+    "url" : "scarf_1"
+  },
+  {
+    "id": "2",
+    "category": "Шарфы",
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/with-love/love-2.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "scarf_2"
+  },
+  {
+    "id": "2",
+    "category": "Шарфы",
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/with-love/love-3.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "scarf_3"
   },
   {
     "id": "2",
     "category": "Подвески",
-    "title": "Шапка из 100% Мериноса Подвески",
+    "title": "Подвеска 1",
     "price": 6000,
-    "image": "assets/images/categories/hats.png",
+    "image": "assets/images/soul/soul-1.png",
     "size": "m",
     "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "description": "the best hat from merinos, you will not find better",
+    "url" : "podveska_1"
   },
   {
     "id": "2",
     "category": "Подвески",
-    "title": "Шапка из 100% Мериноса Подвески",
-    "price": 6000,
-    "image": "assets/images/categories/hats.png",
-    "size": "m",
-    "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/soul/soul-1.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "podveska_2"
   },
   {
     "id": "2",
     "category": "Подвески",
-    "title": "Шапка из 100% Мериноса Подвески",
-    "price": 6000,
-    "image": "assets/images/categories/hats.png",
-    "size": "m",
-    "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/soul/soul-2.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "podveska_3"
   },
   {
     "id": "2",
     "category": "Подвески",
-    "title": "Шапка из 100% Мериноса Подвески",
-    "price": 6000,
-    "image": "assets/images/categories/hats.png",
-    "size": "m",
-    "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/soul/soul-3.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "podveska_4"
   },
   {
     "id": "2",
     "category": "Подвески",
-    "title": "Шапка из 100% Мериноса Подвески",
-    "price": 6000,
-    "image": "assets/images/categories/hats.png",
-    "size": "m",
-    "color": "white",
-    "description": "the best hat from merinos, you will not find better"
+    "title": "шапка из 100% мериноса",
+    "price": 5000,
+    "image" : "assets/images/with-love/love-4.png",
+    "size": "M",
+    "color" : "white",
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "podveska_5"
+  },
+  {
+    "id": "3",
+    "category": "Сертификаты",
+    "title": "Подарочный сертификат",
+    "price": 5000,
+    "image" : "assets/images/certificates/certificate.png",
+    "description" : "Подарочный сертификат на сумму 5000 рублей",
+    "url" : "sertificate_1"
+  },
+  {
+    "id": "3",
+    "category": "Сертификаты",
+    "title": "Подарочный сертификат",
+    "price": 10000,
+    "image" : "assets/images/certificates/certificate.png",
+    "description" : "Подарочный сертификат на сумму 10000 рублей",
+    "url" : "sertificate_2"
+  },
+  {
+    "id": "3",
+    "category": "Сертификаты",
+    "title": "Подарочный сертификат",
+    "price": 20000,
+    "image" : "assets/images/certificates/certificate.png",
+    "description" : "Подарочный сертификат на сумму 20000 рублей",
+    "url" : "sertificate_3"
   }
 ]

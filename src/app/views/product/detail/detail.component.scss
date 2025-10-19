@@ -1,0 +1,190 @@
+@import "../../../../assets/styles/variables";
+.detail{
+  margin: 60px 102px 180px 102px;
+  .container{
+
+   .detail-product{
+     display: flex;
+     justify-content: space-between;
+     .product-views{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       .view{
+         width: 186px;
+         height: 199px;
+         background-size: cover;       /* or "contain" depending on your goal */
+         background-position: center;  /* centers the image */
+         background-repeat: no-repeat; /* avoids tiling */
+         &:hover{
+           transform: scale(1.05);
+           transition: transform .2s;
+         }
+       }
+     }
+     .main-view{
+       margin-left: 21px;
+       margin-right: 21px;
+       width: 608px;
+       height: 697px;
+       background-size: cover;       /* or "contain" depending on your goal */
+       background-position: center;  /* centers the image */
+       background-repeat: no-repeat; /* avoids tiling */
+     }
+     .product-info{
+       width: 400px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       .product-info-title{
+         font-family: "PT Sans Narrow", sans-serif;
+         font-size: 32px;
+         font-style: normal;
+         font-weight: 400;
+         text-transform: uppercase;
+         line-height: 140%;
+         color: #262523;
+       }
+       .product-price{
+         color: #585450;
+         font-family: Arial, sans-serif;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 400;
+         .product-price-title{
+           line-height: 140%; /* 28px */
+           text-transform: uppercase;
+           margin-bottom: 15px;
+         }
+         .product-price-price{
+           color: #262523;
+           font-weight: 700;
+           line-height: 120%; /* 24px */
+           letter-spacing: 0.2px;
+         }
+       }
+       .product-sizes{
+         display: flex;
+         align-items: center;
+         span {
+           color: #262523;
+           font-family: Arial,sans-serif;
+           font-size: 20px;
+           font-style: normal;
+           font-weight: 400;
+           line-height: 140%; /* 28px */
+           margin-right: 10px;
+         }
+         .size{
+           width: 40px;
+           height: 40px;
+           border: 1px solid #A69F9F;
+           box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.18);
+           margin-right: 10px;
+           color: #585450;
+           text-align: center;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           /* P1 - 20 */
+           font-family: Arial, sans-serif;
+           font-size: 20px;
+           font-style: normal;
+           font-weight: 400;
+           line-height: 140%; /* 28px */
+           cursor: pointer;
+           &:hover{
+             transform: scale(1.05);
+             transition: transform .2s;
+           }
+         }
+         .picked{
+           border: 3px solid #A69F9F;
+         }
+       }
+       .product-color{
+         color: #262523;
+         font-family: Arial,sans-serif;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%; /* 28px */
+         span{
+           margin-right: 5px;
+         }
+       }
+       .product-other-colors{
+         width: 295px;
+         height: 143px;
+         display: flex;
+         flex-direction: column;
+         .product-other-color-title{
+           color: #262523;
+           /* P1 - 20 */
+           font-family: Arial, sans-serif;
+           font-size: 20px;
+           font-style: normal;
+           font-weight: 400;
+           line-height: 140%; /* 28px */
+         }
+         .product-other-colors-colors{
+           display: flex;
+           justify-content: space-between;
+           .color{
+             .color-icon{
+               width: 85px;
+               height: 85px;
+               background-size: cover;       /* or "contain" depending on your goal */
+               background-position: center;  /* centers the image */
+               background-repeat: no-repeat; /* avoids tiling */
+               &:hover{
+                 transform: scale(1.05);
+                 transition: transform .2s;
+               }
+             }
+             .color-title{
+               margin-top: 8px;
+               text-align: center;
+               text-transform: uppercase;
+               color: #262523;
+               font-family: Arial, sans-serif;
+               font-size: 14px;
+               font-style: normal;
+               font-weight: 400;
+               line-height: 140%; /* 28px */
+             }
+           }
+         }
+       }
+       .product-description-title,
+       .product-description{
+         color: #585450;
+         /* P1 - 20 */
+         font-family: Arial,sans-serif;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%; /* 28px */
+       }
+     }
+    .button{
+      cursor: pointer;
+      width: 400px;
+      padding: 20px 10px;
+      text-align: center;
+      color: var#262523;
+      /* P2.2 - 16 ar */
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 19.2px */
+      letter-spacing: 0.32px;
+      border: 1px solid #262523;
+      background: transparent;
+    }
+   }
+  }
+
+
+}

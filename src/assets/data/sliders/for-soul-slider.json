@@ -1,42 +1,46 @@
 [
   {
-    "id": "1",
-    "category": "1",
+    "id": "2",
+    "category": "Подвески",
     "title": "шапка из 100% мериноса",
     "price": 5000,
     "image" : "assets/images/soul/soul-1.png",
     "size": "M",
     "color" : "white",
-    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "podveska_2"
   },
   {
     "id": "2",
-    "category": "1",
+    "category": "Подвески",
     "title": "шапка из 100% мериноса",
     "price": 5000,
     "image" : "assets/images/soul/soul-2.png",
     "size": "M",
     "color" : "white",
-    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "podveska_3"
   },
   {
-    "id": "3",
-    "category": "1",
+    "id": "2",
+    "category": "Подвески",
     "title": "шапка из 100% мериноса",
     "price": 5000,
     "image" : "assets/images/soul/soul-3.png",
     "size": "M",
     "color" : "white",
-    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "podveska_4"
   },
   {
-    "id": "4",
-    "category": "1",
+    "id": "2",
+    "category": "Подвески",
     "title": "шапка из 100% мериноса",
     "price": 5000,
     "image" : "assets/images/with-love/love-4.png",
     "size": "M",
     "color" : "white",
-    "description" : "шапка из 100% мериноса описание шапки самой лучшей"
+    "description" : "шапка из 100% мериноса описание шапки самой лучшей",
+    "url" : "podveska_5"
   }
 ]

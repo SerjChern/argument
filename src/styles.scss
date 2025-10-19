@@ -2,3 +2,15 @@
 @import "assets/styles/_fonts";
 @import "assets/styles/_mixins";
 @import "assets/styles/_global";
+
+.custom-snackbar {
+  display: flex !important;
+  justify-content: center !important; /* centers horizontally */
+  align-items: center !important;    /* centers vertically if multiline */
+  text-align: center !important;     /* centers text */
+  padding: 16px 24px !important;     /* optional, adjust padding */
+  font-size: 16px !important;
+  max-width: 400px !important;       /* optional, controls width */
+  box-sizing: border-box;
+  white-space: normal !important;    /* allow multi-line text */
+}

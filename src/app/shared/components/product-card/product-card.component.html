@@ -1,11 +1,11 @@
-<div class="product-card">
+<div class="product-card" [routerLink]="['/product', Product.url]" >
   <div class="product-card-image" style="background-image: url({{Product.image}})"></div>
   <div class="product-card-name">{{ Product.title }}</div>
     <div class="product-card-action">
       <div class="product-card-prise">
         {{Product.price}} руб.
       </div>
-      <a [routerLink]="'/product/'+ Product.category + '/' + Product.id" >
+      <a>
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
           <path d="M6.45503 28.3666L4.44836 16.3999C4.14503 14.5899 3.99336 13.6866 4.48003 13.0933C4.96503 12.4999 5.85836 12.4999 7.64336 12.4999H32.3567C34.1417 12.4999 35.035 12.4999 35.52 13.0933C36.0067 13.6866 35.8534 14.5899 35.5517 16.3999L33.545 28.3666C32.88 32.3333 32.5484 34.3149 31.19 35.4916C29.8334 36.6666 27.8767 36.6666 23.9634 36.6666H16.0367C12.1234 36.6666 10.1667 36.6666 8.81003 35.4899C7.45169 34.3149 7.12003 32.3316 6.45503 28.3649M29.1667 12.4999C29.1667 10.0688 28.2009 7.73719 26.4818 6.01811C24.7628 4.29902 22.4312 3.33325 20 3.33325C17.5689 3.33325 15.2373 4.29902 13.5182 6.01811C11.7991 7.73719 10.8334 10.0688 10.8334 12.4999" stroke="#585450" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>

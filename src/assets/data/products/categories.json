@@ -34,5 +34,15 @@
         "idSubCat": 2
       }
     ]
+  },
+  {
+    "id": 3,
+    "categoryType": "Разное",
+    "subCategories": [
+      {
+        "name": "Сертификаты",
+        "idSubCat": 1
+      }
+    ]
   }
 ]

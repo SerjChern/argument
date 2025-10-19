@@ -1,17 +1,32 @@
 [
   {
-    "href": "#",
+    "id": "3",
+    "category": "Сертификаты",
+    "title": "Подарочный сертификат",
+    "price": 5000,
     "gradient": "linear-gradient(180deg, #6D83AC 19.23%, #7E87B3 50%, #A7B9E6 63.94%, #525576 75.48%)",
-    "price": 5000
+    "image" : "assets/images/certificates/certificate.png",
+    "description" : "Подарочный сертификат на сумму 5000 рублей",
+    "url" : "sertificate_1"
   },
   {
-    "href": "#",
+    "id": "3",
+    "category": "Сертификаты",
+    "title": "Подарочный сертификат",
+    "price": 10000,
     "gradient": "linear-gradient(180deg, #828F64 19.23%, #99A976 50%, #C8DC99 63.94%, #6B7652 75.48%)",
-    "price": 10000
+    "image" : "assets/images/certificates/certificate.png",
+    "description" : "Подарочный сертификат на сумму 10000 рублей",
+    "url" : "sertificate_2"
   },
   {
-    "href": "#",
+    "id": "3",
+    "category": "Сертификаты",
+    "title": "Подарочный сертификат",
+    "price": 20000,
     "gradient": "linear-gradient(180deg, #9A415D 19.23%, #BD6A7F 50%, #DC99BE 63.94%, #7E244B 75.48%)",
-    "price": 20000
+    "image" : "assets/images/certificates/certificate.png",
+    "description" : "Подарочный сертификат на сумму 20000 рублей",
+    "url" : "sertificate_3"
   }
 ]

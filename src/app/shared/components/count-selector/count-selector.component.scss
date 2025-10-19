@@ -1,0 +1,27 @@
+.count-selector {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .input{
+    border: 1px solid #A69F9F;
+    text-align: center;
+    padding: 8px 7px;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    color: #262523;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
