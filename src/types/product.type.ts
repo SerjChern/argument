@@ -4,8 +4,15 @@ export type ProductType = {
   "title": string,
   "price": number,
   "image": string,
-  "size": string,
-  "color": string,
+  "size"?: string,
+  "otherSizes"?: string[],
+  "color"?: string,
+  "otherColors"?: {
+    "color": string,
+    "icon": string
+  }[],
   "description": string,
   "sort"?: string,
+  "gradient"?: string,
+  "url": string,
 }

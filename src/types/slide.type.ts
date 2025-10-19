@@ -3,4 +3,6 @@ export type SlideType = {
   src: string,
   alt: string,
   title: string,
+  categoryId?: string,
+  sub?: string,
 }

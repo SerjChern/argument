@@ -17,9 +17,10 @@ export class CatalogComponent implements OnInit {
   protected categories: CategoriesType[] = [];
   protected filteredProducts: ProductType[] = [];
   protected filteredCategories: string[] = []; //array of filtered categories for filter elements above catalog
+  protected paginatedProducts: ProductType[] = []; //продукты для отображения на текущей странице
   protected pages: number[] = []; //отображаемые страницы
-  private amountOfProductsPerPage: number = 3; // константа количество товаров на странице
-  protected pageAmount: number = 0;
+  private amountOfProductsPerPage: number = 6; // константа количество товаров на странице
+  protected pageAmount: number = 0; // количество страниц
 
   protected sortingOpen: boolean = false;
   protected filtersActive: boolean = false;
@@ -34,10 +35,11 @@ export class CatalogComponent implements OnInit {
               private route: ActivatedRoute,
               private router: Router,) { }
 
-  ngOnInit(): void {
+ /* ngOnInit(): void {
 
     this.GetSlidesService.getProducts(this.ProductsUrl).subscribe(data => {
       this.products = data;
+      this.filteredProducts = data;
       this.route.queryParams.subscribe(params => {
         this.activeParams = { ...params }; // сохраняем текущие query-параметры
 
@@ -72,6 +74,36 @@ export class CatalogComponent implements OnInit {
       });
     });
   }
+*/
+
+  ngOnInit(): void {
+    this.GetSlidesService.getProducts(this.ProductsUrl).subscribe(data => {
+      this.products = data;
+      this.filteredProducts = data;
+
+      this.GetSlidesService.getCategories(this.CategoryUrl).subscribe(cats => {
+        this.categories = cats;
+      });
+
+      this.route.queryParams.subscribe(params => {
+        this.activeParams = { ...params };
+        if (!this.activeParams.page) this.activeParams.page = 1;
+
+        this.applyFilters(params);
+        this.filtersActive = this.hasQueryParams();
+
+        if (params['sort']) {
+          this.applySorting(params['sort']);
+        }
+
+        if (params['sub']) {
+          this.filteredCategories = decodeURIComponent(params['sub']).split(',');
+        } else {
+          this.filteredCategories = [];
+        }
+      });
+    });
+  }
 
   protected calculatePages(products: ProductType[]): number {
     if (products && products.length > 0) {
@@ -80,6 +112,15 @@ export class CatalogComponent implements OnInit {
     } else {
       return 1;
     }
+  }
+
+  private updatePagination(): void {
+    // calculate start and end index
+    const startIndex = (this.activeParams.page - 1) * this.amountOfProductsPerPage;
+    const endIndex = startIndex + this.amountOfProductsPerPage;
+
+    // slice products for current page
+    this.paginatedProducts = this.filteredProducts.slice(startIndex, endIndex);
   }
 
   protected hasQueryParams(): boolean {
@@ -94,11 +135,38 @@ export class CatalogComponent implements OnInit {
       replaceUrl: true          // optional: avoids adding a new entry in browser history
     });
   }
-
   private applyFilters(params: any) {
+    const categoryIds = params['categoryId'] ? params['categoryId'].split(',') : [];
+    const subs = params['sub'] ? decodeURIComponent(params['sub']).split(',') : [];
+
+    this.filteredProducts = this.products.filter(product => {
+      // фильтр по categoryId (например id = "1")
+      if (categoryIds.length > 0 && !categoryIds.includes(product.id.toString())) {
+        return false;
+      }
+
+      // фильтр по sub (например category = "Свитеры")
+      if (subs.length > 0 && !subs.includes(product.category)) {
+        return false;
+      }
+
+      return true;
+    });
+
+    // обновляем пагинацию
+    this.pageAmount = this.calculatePages(this.filteredProducts);
+    this.pages = Array.from({ length: this.pageAmount }, (_, i) => i + 1);
+
+    // если номер страницы невалиден — сбрасываем на 1
+    if (!this.activeParams.page || this.activeParams.page > this.pageAmount) {
+      this.activeParams.page = 1;
+    }
+
+    this.updatePagination();
+  }
+ /* private applyFilters(params: any) {
       const categoryIds = params['categoryId'] ? params['categoryId'].split(',') : [];
       const subs = params['sub'] ? params['sub'].split(',') : [];
-    console.log(this.filteredCategories);
       this.filteredProducts = this.products.filter(product => {
         let match = true;
 
@@ -119,8 +187,15 @@ export class CatalogComponent implements OnInit {
       for (let i=1; i <=this.pageAmount; i++) {
         this.pages.push(i);
       }
-  }
 
+    // 👇 add this to initialize current page view
+    if (!this.activeParams.page || this.activeParams.page > this.pageAmount) {
+      this.activeParams.page = 1; // reset to first page if invalid
+    }
+
+    this.updatePagination();
+  }
+*/
  /* protected removeFilters(subToRemove: string): void {
     // убираем выбранный фильтр из массива
     this.filteredCategories = this.filteredCategories.filter(item => item !== subToRemove);
@@ -163,8 +238,6 @@ export class CatalogComponent implements OnInit {
       // редиректим на чистый каталог
       this.router.navigate(['/catalog']);
     }
-
-    console.log(this.filteredCategories);
   }
 
   protected sortingToggle(): void {
@@ -185,16 +258,32 @@ export class CatalogComponent implements OnInit {
     this.applySorting(value);
   }
 
-  private applySorting(value: string): void {
+ /* private applySorting(value: string): void {
     if (value === 'price-asc') {
       this.filteredProducts = [...this.filteredProducts].sort((a, b) => a.price - b.price);
     } else if (value === 'price-desc') {
       this.filteredProducts = [...this.filteredProducts].sort((a, b) => b.price - a.price);
     }
   }
+*/
+  private applySorting(value: string): void {
+    // определяем, над каким массивом работаем
+    const arrayToSort = this.filteredProducts.length > 0
+        ? [...this.filteredProducts] // если есть фильтры
+        : [...this.products];        // если фильтров нет
+
+    if (value === 'price-asc') {
+      this.filteredProducts = arrayToSort.sort((a, b) => a.price - b.price);
+    } else if (value === 'price-desc') {
+      this.filteredProducts = arrayToSort.sort((a, b) => b.price - a.price);
+    }
+
+    this.updatePagination();
+  }
 
   protected openPage(page: number) {
     this.activeParams.page = page; // update immediately
+    this.updatePagination();
     this.router.navigate([], {
       relativeTo: this.route,
       queryParamsHandling: 'merge',
@@ -205,6 +294,7 @@ export class CatalogComponent implements OnInit {
   openPrevPage() {
     if (this.activeParams.page && this.activeParams.page > 1) {
       this.activeParams.page --;
+      this.updatePagination();
       this.router.navigate(['/catalog'], {
         queryParams: this.activeParams
       });
@@ -215,6 +305,7 @@ export class CatalogComponent implements OnInit {
   openNextPage() {
     if (this.activeParams.page && this.activeParams.page < this.pages.length) {
       this.activeParams.page ++;
+      this.updatePagination();
       this.router.navigate(['/catalog'], {
         queryParams: this.activeParams
       });

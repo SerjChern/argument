@@ -8,6 +8,7 @@ import {
 } from '@angular/animations';
 import {Router, NavigationEnd, Event as RouterEvent} from "@angular/router";
 import {filter} from "rxjs";
+import {CartService} from "../../services/cart.service";
 
 @Component({
   selector: 'app-header',
@@ -63,9 +64,16 @@ export class HeaderComponent implements OnInit {
     { label: 'Уход за изделием', link: '/care' },
   ]
 
-  constructor(private router: Router,) {}
+  constructor(private router: Router,
+              private cartService: CartService) {}
+
+  protected productCount: number = 0;
 
   ngOnInit(): void {
+    // 🔥 Automatically updates whenever cart changes
+    this.cartService.cart$.subscribe(items => {
+      this.productCount = items.reduce((sum, item) => sum + item.quantity, 0);
+    });
     // 1️⃣ Initial route check
     this.isHome = this.router.url === '/';
     console.log('Initial route:', this.router.url, 'isHome=', this.isHome);
@@ -89,6 +97,20 @@ export class HeaderComponent implements OnInit {
     return this.isHome && !this.menu;
   }
 
+  getQueryParams(item: any) {
+    const params: any = {};
+
+    if (item.categoryId) {
+      params.categoryId = item.categoryId;
+    }
+
+    if (item.sub) {
+      params.sub = item.sub;
+    }
+
+    // ⚙️ If no filters, return null so Angular won’t append ? at all
+    return Object.keys(params).length ? params : null;
+  }
 }
 
 

@@ -28,7 +28,9 @@
     <div class="carousel-items">
       <owl-carousel-o [options]="customOptions" #owlCar>
         <ng-template carouselSlide *ngFor="let slide of slides">
-          <category-card [category]="slide"></category-card>
+          <category-card [category]="slide"
+                         [routerLink]="'/catalog'" [queryParams]="{ categoryId: slide.categoryId, sub: slide.sub }">
+          </category-card>
         </ng-template>
       </owl-carousel-o>
     </div>
@@ -80,7 +82,7 @@
     <div class="certificates-title">подарочные сертификаты</div>
     <div class="certificates-items">
       <div class="certificate-item" *ngFor="let item of gift_certificates" [ngStyle]="{ 'background': item.gradient }">
-        <a href="{{ item.href }}">
+        <a [routerLink]="['/product', item.url]">
           <div class="certificate-item">
             <div class="certificate-logo">
               <img src="./assets/images/logo/certificate-logo.svg" alt="cert-logo">

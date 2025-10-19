@@ -46,7 +46,7 @@
       </div>
 
       <div class="catalog-products">
-        <product-card *ngFor="let product of filteredProducts" [Product]="product"></product-card>
+        <product-card *ngFor="let product of paginatedProducts" [Product]="product"></product-card>
       </div>
     </div>
       <div class="pagination" *ngIf="pages.length > 1">
