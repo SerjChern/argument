@@ -28,6 +28,9 @@
       align-items: center;
       justify-content: space-between;
       width: 178px;
+      .social-item {
+        cursor: pointer;
+      }
     }
   }
 
