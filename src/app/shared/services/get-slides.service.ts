@@ -28,4 +28,8 @@ export class GetSlidesService {
   getCategories(categoriesUrl: string): Observable<CategoriesType[] > {
     return this.http.get<CategoriesType[]>(categoriesUrl);
   }
+
+  getString(stringUrl: string): Observable<string> {
+    return this.http.get<string>(stringUrl);
+  }
 }

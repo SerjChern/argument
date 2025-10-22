@@ -1,4 +1,4 @@
-<div class="order">
+<div class="order" [formGroup]="orderForm">
   <div class="container">
     <div class="nav-back" routerLink="/cart">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -12,31 +12,59 @@
         <div class="order-contacts">
           <div class="title">как с вами связаться</div>
           <div class="order-input">
-            <input type="text" class="input" placeholder="Имя">
+            <input type="text" class="input"
+                   [ngStyle]="{'border-color': orderForm.get('name')?.invalid
+                 && (orderForm.get('name')?.dirty || orderForm.get('name')?.touched) ? 'red' : ''
+                  }"
+                   placeholder="Имя" formControlName="name">
           </div>
           <div class="order-input">
-            <input type="text" class="input" placeholder="Номер телефона">
+            <input type="text" class="input"
+                   [ngStyle]="{'border-color': orderForm.get('phone')?.invalid
+                 && (orderForm.get('phone')?.dirty || orderForm.get('phone')?.touched) ? 'red' : ''
+                  }"
+                   placeholder="Номер телефона" formControlName="phone">
           </div>
           <div class="order-input">
-            <input type="text" class="input" placeholder="Имейл">
+            <input type="text" class="input"
+                   [ngStyle]="{'border-color': orderForm.get('email')?.invalid
+                 && (orderForm.get('email')?.dirty || orderForm.get('email')?.touched) ? 'red' : ''
+                  }"
+                   placeholder="Имейл" formControlName="email">
           </div>
         </div>
         <div class="order-address">
           <div class="title">укажите адрес для доставки</div>
           <div class="order-input">
-            <input type="text" class="input" placeholder="Город">
+            <input type="text" class="input"
+                   [ngStyle]="{'border-color': orderForm.get('city')?.invalid
+                 && (orderForm.get('city')?.dirty || orderForm.get('city')?.touched) ? 'red' : ''
+                  }"
+                   placeholder="Город" formControlName="city">
           </div>
           <div class="order-input">
-            <input type="text" class="input" placeholder="Улица">
+            <input type="text" class="input"
+                   [ngStyle]="{'border-color': orderForm.get('street')?.invalid
+                 && (orderForm.get('street')?.dirty || orderForm.get('street')?.touched) ? 'red' : ''
+                  }"
+                   placeholder="Улица" formControlName="street">
           </div>
           <div class="order-input">
-            <input type="text" class="input" placeholder="Дом">
+            <input type="text" class="input"
+                   [ngStyle]="{'border-color': orderForm.get('house')?.invalid
+                 && (orderForm.get('house')?.dirty || orderForm.get('house')?.touched) ? 'red' : ''
+                  }"
+                   placeholder="Дом" formControlName="house">
           </div>
           <div class="order-input">
             <input type="text" class="input" placeholder="Подъезд">
           </div>
           <div class="order-input">
-            <input type="text" class="input" placeholder="Квартира">
+            <input type="text" class="input"
+                   [ngStyle]="{'border-color': orderForm.get('flat')?.invalid
+                 && (orderForm.get('flat')?.dirty || orderForm.get('flat')?.touched) ? 'red' : ''
+                  }"
+                   placeholder="Квартира" formControlName="flat">
           </div>
         </div>
         <div class="payment-method">
@@ -117,7 +145,7 @@
             </div>
           </div>
           <div class="order-action">
-            <button class="order-button">Оплатить заказ</button>
+            <button class="order-button" (click)="placeOrder()">Оплатить заказ</button>
           </div>
         </div>
       </div>

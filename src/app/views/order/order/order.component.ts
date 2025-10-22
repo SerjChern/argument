@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {Subscription} from "rxjs";
 import {ProductInCart} from "../../../../types/product-in-cart.type";
 import {CartService} from "../../../shared/services/cart.service";
+import {FormBuilder, Validators} from "@angular/forms";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'order',
@@ -24,8 +27,21 @@ export class OrderComponent implements OnInit {
   paymentDeliveryOptions = ['Доставка курьером',
                                     'Доставка в пункт выдачи'];
 
+  orderForm = this.fb.group({
+    name: ['', Validators.required],
+    phone: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    city: ['', [Validators.required]],
+    street: ['', [Validators.required]],
+    house: ['', [Validators.required]],
+    flat: ['', [Validators.required]],
+  })
 
-  constructor(private cartService: CartService) { }
+
+  constructor(private cartService: CartService,
+              private fb: FormBuilder,
+              private _snackBar: MatSnackBar,
+              private router: Router,) { }
 
   ngOnInit(): void {
     this.sub = this.cartService.cart$.subscribe(items => {
@@ -67,5 +83,21 @@ export class OrderComponent implements OnInit {
 
   private recalculateTotal(): void {
     this.price = this.cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  }
+
+  placeOrder(): void {
+    if (this.orderForm.invalid) {
+      this._snackBar.open('Заполните данные', '', {
+        duration: 2000,
+        panelClass: ['snack-center']
+      });
+      return;
+    }
+    this._snackBar.open('Заказ успешно размещен', '', {
+      duration: 2000,
+      panelClass: ['snack-center']
+    });
+    this.cartService.clearCart();
+    this.router.navigate(['/']);
   }
 }

@@ -9,6 +9,7 @@ import {
 import {Router, NavigationEnd, Event as RouterEvent} from "@angular/router";
 import {filter} from "rxjs";
 import {CartService} from "../../services/cart.service";
+import {ForCustomersType} from "../../../../types/for-customers.type";
 
 @Component({
   selector: 'app-header',
@@ -54,14 +55,14 @@ export class HeaderComponent implements OnInit {
     { label: 'носки', categoryId: '1', sub: 'Носки' }
   ];
 
-  protected forCustomersItems = [
-    { label: 'Контакты', link: '/contacts' },
-    { label: 'Наша философия', link: '/philosophy' },
-    { label: 'Волонтерство', link: '/vaulonteer' },
-    { label: 'Публичная оферта', link: '/oferta' },
-    { label: 'Оплата и доставка', link: '/payment_delivery' },
-    { label: 'Обмен и возврат', link: '/return' },
-    { label: 'Уход за изделием', link: '/care' },
+  protected forCustomersItems: ForCustomersType[] = [
+    { label: 'Контакты', link: '/for_customers', query: 'contacts' },
+   /* { label: 'Наша философия', link: '/for_customers', query: 'return' },*/
+    { label: 'Волонтерство', link: '/for_customers', query: 'volunteer' },
+    { label: 'Публичная оферта', link: '/for_customers', query: 'offer' },
+    { label: 'Оплата и доставка', link: '/for_customers', query: 'payment' },
+    { label: 'Обмен и возврат', link: '/for_customers', query: 'return'},
+    { label: 'Уход за изделием', link: '/for_customers', query: 'care' },
   ]
 
   constructor(private router: Router,
@@ -111,6 +112,8 @@ export class HeaderComponent implements OnInit {
     // ⚙️ If no filters, return null so Angular won’t append ? at all
     return Object.keys(params).length ? params : null;
   }
+
+  //protected readonly it = it;
 }
 
 

@@ -1,0 +1,103 @@
+@import "../../../../assets/styles/_mixins";
+
+.for-customer {
+  padding: 35px 100px 100px 100px;
+  .container {
+    .for-customer-title{
+      @include block-header;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    .for-customer-content{
+      display: flex;
+      .menu{
+        .nav-title{
+          width: 280px;
+          color: rgba(88, 84, 80, 1);
+          font-family: Arial, sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+          text-transform: uppercase;
+          padding-bottom: 14px;
+          box-sizing: border-box;
+          border-bottom: 2px solid rgba(166, 159, 159, 1);
+        }
+        .nav-body{
+          padding: 14px 14px 14px 0;
+          ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{
+              margin-bottom: 20px;
+              .active{
+                color: rgba(38, 37, 35, 1);
+              }
+              a{
+                color: rgba(166, 159, 159, 1);
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                text-transform: uppercase;
+                cursor: pointer;
+                &:hover{
+                  text-decoration: underline;
+                }
+
+              }
+            }
+          }
+        }
+      }
+      .content{
+        margin-left: 20px;
+        color: rgba(88, 84, 80, 1);
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+      }
+      .content-payment{
+        .content-payment-payment{
+          .title{
+            display: inline-block;
+            @include block-header;
+          }
+          margin-bottom: 100px;
+        }
+        .delivery-content{
+          .delivery-title{
+            display: inline-block;
+            @include block-header;
+          }
+        }
+      }
+      .care{
+        p{
+          font-size: 24px;
+        }
+        ul{
+          li{
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .contacts{
+        text-align: center;
+      }
+      .volunteer{
+        .volunteer-main{
+          display: flex;
+          .volunteer-main-description{
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
