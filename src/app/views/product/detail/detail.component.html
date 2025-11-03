@@ -7,6 +7,15 @@
       <span>В каталог</span>
     </div>
     <div class="detail-product">
+      <!-- Карусель для адаптива -->
+      <div class="carousel">
+          <owl-carousel-o [options]="customOptionsSoul" #owlCar_soul>
+            <ng-template carouselSlide *ngFor="let slide of images">
+              <div class="slide" [ngStyle]="{'background-image': 'url(' + slide + ')'}"> </div>
+            </ng-template>
+          </owl-carousel-o>
+      </div>
+      <!---------------------------->
       <div class="product-views">
         <div
           *ngFor="let img of images"
@@ -38,45 +47,46 @@
               <div class="color-icon" style="background-image: url({{color.icon}})"></div>
               <div class="color-title">{{color.color}}</div>
             </div>
-
           </div>
         </div>
+        <div>
           <div class="product-description-title" *ngIf="product?.description" >Описание:</div>
           <div class="product-description" *ngIf="product?.description">
             {{product?.description}}
           </div>
-          <button class="button" (click)="addToCart()">Добавить в корзину</button>
+        </div>
 
+          <button class="button" (click)="addToCart()">Добавить в корзину</button>
       </div>
     </div>
   </div>
-
-  <section class="for-soul">
-    <div class="container">
-      <div class="for-soul-title">для души</div>
-      <div class="for-soul-carousel">
-        <a class="move-backward" (click)="owlCar_soul.prev()">
-          <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M25.3019 8.78401C25.6973 8.39845 26.3304 8.40646 26.716 8.80189C27.1015 9.19732 27.0935 9.83044 26.6981 10.216L25.3019 8.78401ZM25.7413 29.784C26.1368 30.1696 26.1448 30.8027 25.7592 31.1981C25.3737 31.5935 24.7405 31.6015 24.3451 31.216L25.7413 29.784ZM26 9.5L26.6981 10.216L15.2453 21.3828L14.5472 20.6668L13.8491 19.9508L25.3019 8.78401L26 9.5ZM25.0432 30.5L24.3451 31.216L13.3019 20.4486L14 19.7326L14.6981 19.0166L25.7413 29.784L25.0432 30.5Z"
-              fill="#585450"/>
-          </svg>
-        </a>
-        <div class="carousel-items">
-          <owl-carousel-o [options]="customOptionsSoul" #owlCar_soul>
-            <ng-template carouselSlide *ngFor="let slide of slides_soul">
-              <product-card [Product]="slide"></product-card>
-            </ng-template>
-          </owl-carousel-o>
-        </div>
-        <a class="move-forward" (click)="owlCar_soul.next()">
-          <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M14.6981 8.78401C14.3027 8.39845 13.6696 8.40646 13.284 8.80189C12.8985 9.19732 12.9065 9.83044 13.3019 10.216L14.6981 8.78401ZM14.2587 29.784C13.8632 30.1696 13.8552 30.8027 14.2408 31.1981C14.6263 31.5935 15.2595 31.6015 15.6549 31.216L14.2587 29.784ZM14 9.5L13.3019 10.216L24.7547 21.3828L25.4528 20.6668L26.1509 19.9508L14.6981 8.78401L14 9.5ZM14.9568 30.5L15.6549 31.216L26.6981 20.4486L26 19.7326L25.3019 19.0166L14.2587 29.784L14.9568 30.5Z"
-              fill="#585450"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
 </div>
+
+<!--<section class="for-soul">
+  <div class="container">
+    <div class="for-soul-title">для души</div>
+    <div class="for-soul-carousel">
+      <a class="move-backward" (click)="owlCar_soul.prev()">
+        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.3019 8.78401C25.6973 8.39845 26.3304 8.40646 26.716 8.80189C27.1015 9.19732 27.0935 9.83044 26.6981 10.216L25.3019 8.78401ZM25.7413 29.784C26.1368 30.1696 26.1448 30.8027 25.7592 31.1981C25.3737 31.5935 24.7405 31.6015 24.3451 31.216L25.7413 29.784ZM26 9.5L26.6981 10.216L15.2453 21.3828L14.5472 20.6668L13.8491 19.9508L25.3019 8.78401L26 9.5ZM25.0432 30.5L24.3451 31.216L13.3019 20.4486L14 19.7326L14.6981 19.0166L25.7413 29.784L25.0432 30.5Z"
+            fill="#585450"/>
+        </svg>
+      </a>
+      <div class="carousel-items">
+        <owl-carousel-o [options]="customOptionsSoul" #owlCar_soul>
+          <ng-template carouselSlide *ngFor="let slide of slides_soul">
+            <product-card [Product]="slide"></product-card>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+      <a class="move-forward" (click)="owlCar_soul.next()">
+        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.6981 8.78401C14.3027 8.39845 13.6696 8.40646 13.284 8.80189C12.8985 9.19732 12.9065 9.83044 13.3019 10.216L14.6981 8.78401ZM14.2587 29.784C13.8632 30.1696 13.8552 30.8027 14.2408 31.1981C14.6263 31.5935 15.2595 31.6015 15.6549 31.216L14.2587 29.784ZM14 9.5L13.3019 10.216L24.7547 21.3828L25.4528 20.6668L26.1509 19.9508L14.6981 8.78401L14 9.5ZM14.9568 30.5L15.6549 31.216L26.6981 20.4486L26 19.7326L25.3019 19.0166L14.2587 29.784L14.9568 30.5Z"
+            fill="#585450"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>-->

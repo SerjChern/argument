@@ -20,6 +20,9 @@ export class ForCustomerComponent implements OnInit {
     { label: 'Уход за изделием', key: 'care' },
   ];
 
+  protected firstHalf = this.forCustomersItems.slice(0, Math.ceil(this.forCustomersItems.length / 2));
+  protected secondHalf = this.forCustomersItems.slice(Math.ceil(this.forCustomersItems.length / 2));
+
   protected ofertaText: string = '';
   protected paymentText: string = '';
   protected returnText: string = '';

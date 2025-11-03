@@ -136,25 +136,15 @@ export class DetailComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    margin: 5,
-    dots: false,
+    margin: 0,
+    dots: true,
     navSpeed: 700,
-    navText: ['', ''],
     responsive: {
-      0: {
-        items: 1
-      },
-      580: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
+      0: { items: 1 },
+      400: { items: 1 },
+      768: { items: 1 }
     },
     nav: false
-  }
+  };
 
 }

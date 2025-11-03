@@ -210,3 +210,99 @@
 
   }
 }
+
+
+@media screen and (max-width: 777px) {
+  .input{
+    width: 320px;
+  }
+
+  .order{
+    .container{
+      .order-overview{
+        flex-direction: column-reverse;
+      }
+      .order-products{
+        .order-product{
+          display: grid;
+          justify-items: end;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-areas:
+              "picture title title "
+              "picture amount price ";
+          .order-product-image{
+            grid-area: picture;
+          }
+          .order-product-info{
+            grid-area: title;
+            .order-product-info-extra{
+              flex-wrap: wrap;
+              .order-product-info-extra-amount{
+                margin-top: 10px;
+              }
+              .order-product-info-extra-color{
+                margin-right: 0;
+              }
+            }
+          }
+          .order-product-price{
+            grid-area: price;
+          }
+        }
+      }
+      .order-info{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .checkboxes{
+          display: flex;
+          .delivery-method{
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .order {
+    padding-top: 0;
+    .container {
+      padding: 60px 10px;
+      .order-title {
+        margin: 20px 0;
+      }
+      .order-products{
+        .order-product {
+          grid-template-columns: 1fr 1fr;
+          justify-items: center;
+          grid-template-areas:
+              "picture picture"
+              "title title "
+              "amount price ";
+          .order-product-image{
+            width: 200px;
+            height: 200px;
+            grid-area: picture;
+          }
+        }
+        .order-actions {
+          margin-top: 50px;
+          .order-action {
+            .order-button {
+              cursor: pointer;
+              padding: 20px 103px;
+            }
+          }
+        }
+      }
+      .order-info{
+        .checkboxes{
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

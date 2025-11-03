@@ -25,3 +25,38 @@
     line-height: normal;
   }
 }
+
+@media screen and (max-width: 1012px){
+  .count-selector {
+    width: 100px;
+    padding-left: 145px
+  }
+}
+
+@media screen and (max-width: 929px){
+  .count-selector {
+    width: 100px;
+    padding-left: 115px
+  }
+}
+
+@media screen and (max-width: 888px){
+  .count-selector {
+    width: 100px;
+    padding-left: 90px
+  }
+}
+
+@media screen and (max-width: 828px){
+  .count-selector {
+    width: 100px;
+    padding-left: 60px
+  }
+}
+
+@media screen and (max-width: 794px) {
+  .count-selector {
+    width: 100px;
+    padding-left: 28px
+  }
+}

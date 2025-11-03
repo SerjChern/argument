@@ -33,7 +33,7 @@
               </div>
             </div>
           </div>
-          <count-selector [count]="item.quantity"
+          <count-selector class="amount" [count]="item.quantity"
                           (onCountChange)="updateCount(i, $event)"></count-selector>
           <div class="cart-product-price">{{ item.price * item.quantity }} руб</div>
           <div class="cart-product-remove" (click)="removeItem(i)">

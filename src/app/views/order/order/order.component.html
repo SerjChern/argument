@@ -67,36 +67,39 @@
                    placeholder="Квартира" formControlName="flat">
           </div>
         </div>
-        <div class="payment-method">
-          <div class="title">форма оплаты</div>
-          <div class="option" *ngFor="let option of paymentOptions">
-            <label class="label">
-              <input
-                type="checkbox"
-                name="choice"
-                class="checkbox"
-                [checked]="selectedPaymentOption === option"
-                (change)="selectPaymentOption(option, $event)"
-              />
-              {{ option }}
-            </label>
+        <div class="checkboxes">
+          <div class="payment-method">
+            <div class="title">форма оплаты</div>
+            <div class="option" *ngFor="let option of paymentOptions">
+              <label class="label">
+                <input
+                  type="checkbox"
+                  name="choice"
+                  class="checkbox"
+                  [checked]="selectedPaymentOption === option"
+                  (change)="selectPaymentOption(option, $event)"
+                />
+                {{ option }}
+              </label>
+            </div>
+          </div>
+          <div class="delivery-method">
+            <div class="title">доставка</div>
+            <div class="option" *ngFor="let option of paymentDeliveryOptions">
+              <label class="label">
+                <input
+                  type="checkbox"
+                  name="choice"
+                  class="checkbox"
+                  [checked]="selectedDeliveryOption === option"
+                  (change)="selectDeliveryOption(option, $event)"
+                />
+                {{ option }}
+              </label>
+            </div>
           </div>
         </div>
-        <div class="delivery-method">
-          <div class="title">доставка</div>
-          <div class="option" *ngFor="let option of paymentDeliveryOptions">
-            <label class="label">
-              <input
-                type="checkbox"
-                name="choice"
-                class="checkbox"
-                [checked]="selectedDeliveryOption === option"
-                (change)="selectDeliveryOption(option, $event)"
-              />
-              {{ option }}
-            </label>
-          </div>
-        </div>
+
 
 
       </div>
