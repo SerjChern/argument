@@ -101,3 +101,40 @@
     }
   }
 }
+
+@media screen and (max-width: 1011px) {
+  .for-customer {
+    .container{
+      .for-customer-content{
+        flex-direction: column;
+        .menu{
+          .nav-body{
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        .volunteer-main{
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .for-customer {
+    padding: 35px 10px 100px 10px;
+    .container {
+      .for-customer-content{
+        .volunteer-main{
+          .volunteer-main-picture{
+            img{
+              width: 320px;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

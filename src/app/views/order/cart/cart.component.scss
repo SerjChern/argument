@@ -156,3 +156,98 @@
     }
   }
 }
+
+@media screen and (max-width: 1012px) {
+  .cart{
+    .container{
+      .nav-back{
+        padding-left: 10px;
+      }
+      .cart-info{
+        .cart-products{
+          .cart-product{
+            display: grid;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+              "picture title title title"
+              "picture amount price delete";
+            .cart-product-image{
+              grid-area: picture;
+            }
+            .cart-product-info{
+              grid-area: title;
+              padding: 0 25px;
+              .cart-product-info-name{
+                text-align: center;
+              }
+            }
+            .cart-product-price{
+              grid-area: price;
+              padding-left: 35px;
+              text-align: center;
+            }
+            .cart-product-remove{
+              grid-area: delete;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cart {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .container {
+      .cart-title{
+        margin-top: 40px;
+        margin-bottom: 0;
+      }
+      .cart-info {
+        padding: 60px 10px;
+        .cart-empty{
+          .cart-empty-actions{
+            display: flex;
+            flex-direction: column;
+            .order-button{
+              width: 320px;
+              margin-bottom: 20px;
+              padding: 20px 100px;
+              &:first-child{
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        .cart-products {
+          .cart-product {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+              "picture picture"
+              "title title "
+              "amount delete"
+              "price price";
+            .cart-product-image{
+              width: 200px;
+              height: 200px;
+            }
+            .cart-product-info{
+              padding: 20px 25px;
+            }
+            .amount{
+              grid-area: amount;
+            }
+            .cart-product-info{
+              .cart-product-info-extra{
+                flex-direction: column;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

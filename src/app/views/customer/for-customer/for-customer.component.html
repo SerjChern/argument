@@ -16,7 +16,18 @@
         </div>
         <div class="nav-body">
           <ul>
-            <li *ngFor="let item of forCustomersItems">
+            <li *ngFor="let item of firstHalf">
+              <a
+                (click)="selectItem(item)"
+                [class.active]="selectedItem.key === item.key"
+              >
+                {{ item.label }}
+              </a>
+            </li>
+          </ul>
+
+          <ul>
+            <li *ngFor="let item of secondHalf">
               <a
                 (click)="selectItem(item)"
                 [class.active]="selectedItem.key === item.key"
