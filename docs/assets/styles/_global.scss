@@ -56,3 +56,9 @@ html, body {
     margin-left: 5px;
   }
 }
+
+@media screen and (max-width: 777px) {
+  .nav-back{
+    margin-bottom: 0;
+  }
+}
